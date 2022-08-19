@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: mall-product
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        namespace: 295f5b9b-f2ba-4858-a8a3-95597e63aea4

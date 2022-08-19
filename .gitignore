@@ -1,0 +1,17 @@
+/.idea/
+*.iml
+*/.idea/
+
+/mall-auth-server/target/
+/mall-common/target/
+/mall-coupon/target/
+/mall-gateway/target/
+/mall-member/target/
+/mall-order/target/
+/mall-product/target/
+/mall-search/target/
+/mall-third-party/target/
+/mall-ware/target/
+/renren-fast/target/
+/renren-generator/target/
+/renren-generator/.idea/

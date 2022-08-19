@@ -1,0 +1,26 @@
+server:
+  port: 16000
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.56.101:3306/mall_wms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+  application:
+    name: mall-ware
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+mybatis-plus:
+  # mapper-locations: classpath*全包依赖扫描; classpath自己的mapper
+  mapper-locations: classpath:/mapper/**/*.xml
+  #  统一设定自增主键
+  global-config:
+    db-config:
+      id-type: auto
+logging:
+  level:
+    com.vector: debug
