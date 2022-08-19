@@ -6,7 +6,6 @@
     <artifactId>supermall</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>supermall</name>
-    <description>聚合服务</description>
     <packaging>pom</packaging>
 
     <parent>
@@ -28,7 +27,6 @@
         <module>mall-gateway</module>
         <module>mall-third-party</module>
         <module>mall-search</module>
-        <module>mall-auth-server</module>
     </modules>
 
     <properties>
