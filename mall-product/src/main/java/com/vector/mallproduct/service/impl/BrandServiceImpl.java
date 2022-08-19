@@ -1,24 +1,21 @@
 package com.vector.mallproduct.service.impl;
 
-import com.vector.mallproduct.service.CategoryBrandRelationService;
-import org.apache.commons.lang.StringUtils;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Service;
-
-import java.util.Map;
-
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.vector.common.utils.PageUtils;
 import com.vector.common.utils.Query;
-
 import com.vector.mallproduct.dao.BrandDao;
 import com.vector.mallproduct.entity.BrandEntity;
 import com.vector.mallproduct.service.BrandService;
+import com.vector.mallproduct.service.CategoryBrandRelationService;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.Map;
 
 
 @Service("brandService")

@@ -1,19 +1,17 @@
 package com.vector.mallware.service.impl;
 
-import com.vector.mallware.service.WareInfoService;
-import org.apache.commons.lang.StringUtils;
-import org.springframework.stereotype.Service;
-
-import java.util.Map;
-
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.vector.common.utils.PageUtils;
 import com.vector.common.utils.Query;
-
 import com.vector.mallware.dao.WareInfoDao;
 import com.vector.mallware.entity.WareInfoEntity;
+import com.vector.mallware.service.WareInfoService;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Service;
+
+import java.util.Map;
 
 
 @Service("wareInfoService")

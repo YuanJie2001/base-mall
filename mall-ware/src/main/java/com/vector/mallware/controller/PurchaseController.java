@@ -1,10 +1,7 @@
 package com.vector.mallware.controller;
 
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.R;
 import com.vector.mallware.entity.PurchaseEntity;
 import com.vector.mallware.service.PurchaseService;
 import com.vector.mallware.vo.MergeVo;
@@ -12,8 +9,10 @@ import com.vector.mallware.vo.PurchaseDoneVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.R;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 
 /**

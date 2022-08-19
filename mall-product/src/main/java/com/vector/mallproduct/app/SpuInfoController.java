@@ -1,19 +1,17 @@
 package com.vector.mallproduct.app;
 
-import java.util.Arrays;
-
-
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.R;
 import com.vector.common.validator.group.AddGroup;
+import com.vector.mallproduct.entity.SpuInfoEntity;
+import com.vector.mallproduct.service.SpuInfoService;
 import com.vector.mallproduct.vo.SpuInfoFindRagneVo;
 import com.vector.mallproduct.vo.SpuSaveVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import com.vector.mallproduct.entity.SpuInfoEntity;
-import com.vector.mallproduct.service.SpuInfoService;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.R;
+import java.util.Arrays;
 
 
 /**

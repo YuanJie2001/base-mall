@@ -1,16 +1,15 @@
 package com.vector.mallcoupon.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
 import com.vector.common.to.SkuReductionTo;
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.R;
 import com.vector.mallcoupon.entity.SkuFullReductionEntity;
+import com.vector.mallcoupon.service.SkuFullReductionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.vector.mallcoupon.service.SkuFullReductionService;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.R;
+import java.util.Arrays;
+import java.util.Map;
 
 
 /**

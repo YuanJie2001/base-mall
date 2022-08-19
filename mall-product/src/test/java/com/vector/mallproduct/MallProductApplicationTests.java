@@ -3,20 +3,17 @@ package com.vector.mallproduct;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.vector.mallproduct.entity.BrandEntity;
 import com.vector.mallproduct.service.BrandService;
-
 import com.vector.mallproduct.service.CategoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.redisson.api.RedissonClient;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 
 @Slf4j

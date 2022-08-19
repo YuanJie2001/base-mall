@@ -1,23 +1,20 @@
 package com.vector.mallproduct.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.Query;
+import com.vector.mallproduct.dao.SkuImagesDao;
+import com.vector.mallproduct.entity.SkuImagesEntity;
+import com.vector.mallproduct.service.SkuImagesService;
 import com.vector.mallproduct.vo.Skus;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.stream.Collectors;
-
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.Query;
-
-import com.vector.mallproduct.dao.SkuImagesDao;
-import com.vector.mallproduct.entity.SkuImagesEntity;
-import com.vector.mallproduct.service.SkuImagesService;
 
 
 @Service("skuImagesService")

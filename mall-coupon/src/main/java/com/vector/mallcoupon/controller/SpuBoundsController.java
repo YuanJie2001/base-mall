@@ -1,15 +1,14 @@
 package com.vector.mallcoupon.controller;
 
-import java.util.Arrays;
-import java.util.Map;
-
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.R;
 import com.vector.mallcoupon.entity.SpuBoundsEntity;
+import com.vector.mallcoupon.service.SpuBoundsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.vector.mallcoupon.service.SpuBoundsService;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.R;
+import java.util.Arrays;
+import java.util.Map;
 
 
 /**

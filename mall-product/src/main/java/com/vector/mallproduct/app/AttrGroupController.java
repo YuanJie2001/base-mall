@@ -1,11 +1,11 @@
 package com.vector.mallproduct.app;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.R;
 import com.vector.mallproduct.entity.AttrEntity;
+import com.vector.mallproduct.entity.AttrGroupEntity;
 import com.vector.mallproduct.service.AttrAttrgroupRelationService;
+import com.vector.mallproduct.service.AttrGroupService;
 import com.vector.mallproduct.service.AttrService;
 import com.vector.mallproduct.service.CategoryService;
 import com.vector.mallproduct.vo.AttrGroupRelationVo;
@@ -13,12 +13,10 @@ import com.vector.mallproduct.vo.AttrGroupWithAttrsVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.vector.mallproduct.entity.AttrGroupEntity;
-import com.vector.mallproduct.service.AttrGroupService;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.R;
-
 import javax.annotation.Resource;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
 
 
 /**

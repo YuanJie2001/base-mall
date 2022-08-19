@@ -2,9 +2,6 @@ package com.vector.mallproduct.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-
-import java.io.Serializable;
-
 import com.vector.common.valid.AddGroup;
 import com.vector.common.valid.ListValue;
 import com.vector.common.valid.UpdateGroup;
@@ -12,6 +9,7 @@ import lombok.Data;
 import org.hibernate.validator.constraints.URL;
 
 import javax.validation.constraints.*;
+import java.io.Serializable;
 
 /**
  * 品牌

@@ -1,27 +1,24 @@
 package com.vector.mallproduct.service.impl;
 
-import com.vector.mallproduct.entity.AttrEntity;
-import com.vector.mallproduct.service.AttrService;
-import com.vector.mallproduct.vo.BaseAttrs;
-import org.apache.commons.collections4.CollectionUtils;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.vector.common.utils.PageUtils;
 import com.vector.common.utils.Query;
-
 import com.vector.mallproduct.dao.ProductAttrValueDao;
+import com.vector.mallproduct.entity.AttrEntity;
 import com.vector.mallproduct.entity.ProductAttrValueEntity;
+import com.vector.mallproduct.service.AttrService;
 import com.vector.mallproduct.service.ProductAttrValueService;
+import com.vector.mallproduct.vo.BaseAttrs;
+import org.apache.commons.collections4.CollectionUtils;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 
 @Service("productAttrValueService")

@@ -1,11 +1,10 @@
 package com.vector.mallproduct.vo;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 /**
  * @ClassName AttrVo
- * 
+ *
  * @Author YuanJie
  * @Date 2022/7/7 10:54
  */

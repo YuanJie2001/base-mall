@@ -1,29 +1,26 @@
 package com.vector.mallware.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.Query;
 import com.vector.common.utils.R;
+import com.vector.mallware.dao.WareSkuDao;
+import com.vector.mallware.entity.WareSkuEntity;
 import com.vector.mallware.openFeign.ProductFeignService;
 import com.vector.mallware.service.WareSkuService;
 import com.vector.mallware.vo.SkuHasStockVo;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.Query;
-
-import com.vector.mallware.dao.WareSkuDao;
-import com.vector.mallware.entity.WareSkuEntity;
-import org.springframework.transaction.annotation.Transactional;
-
-import javax.annotation.Resource;
 
 
 @Service("wareSkuService")

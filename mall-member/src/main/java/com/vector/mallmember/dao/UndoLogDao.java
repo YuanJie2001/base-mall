@@ -1,7 +1,7 @@
 package com.vector.mallmember.dao;
 
-import com.vector.mallmember.entity.UndoLogEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.vector.mallmember.entity.UndoLogEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

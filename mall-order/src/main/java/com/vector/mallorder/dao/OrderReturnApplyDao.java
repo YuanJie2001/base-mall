@@ -1,7 +1,7 @@
 package com.vector.mallorder.dao;
 
-import com.vector.mallorder.entity.OrderReturnApplyEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.vector.mallorder.entity.OrderReturnApplyEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

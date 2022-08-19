@@ -1,8 +1,7 @@
 package com.vector.mallproduct.dao;
 
-import com.vector.mallproduct.entity.SpuCommentEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
+import com.vector.mallproduct.entity.SpuCommentEntity;
 
 /**
  * 商品评价

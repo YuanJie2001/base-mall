@@ -1,12 +1,20 @@
 package com.vector.mallproduct.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.vector.common.to.SkuReductionTo;
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.Query;
 import com.vector.common.utils.R;
+import com.vector.mallproduct.dao.SkuInfoDao;
 import com.vector.mallproduct.entity.SkuImagesEntity;
+import com.vector.mallproduct.entity.SkuInfoEntity;
 import com.vector.mallproduct.entity.SpuInfoDescEntity;
 import com.vector.mallproduct.entity.SpuInfoEntity;
 import com.vector.mallproduct.openfeign.CouponOpenFeinService;
 import com.vector.mallproduct.service.SkuImagesService;
+import com.vector.mallproduct.service.SkuInfoService;
 import com.vector.mallproduct.service.SkuSaleAttrValueService;
 import com.vector.mallproduct.service.SpuInfoDescService;
 import com.vector.mallproduct.vo.*;
@@ -14,7 +22,9 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
@@ -22,19 +32,6 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ThreadPoolExecutor;
-
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.Query;
-
-import com.vector.mallproduct.dao.SkuInfoDao;
-import com.vector.mallproduct.entity.SkuInfoEntity;
-import com.vector.mallproduct.service.SkuInfoService;
-import org.springframework.transaction.annotation.Transactional;
-
-import javax.annotation.Resource;
 
 
 @Service("skuInfoService")

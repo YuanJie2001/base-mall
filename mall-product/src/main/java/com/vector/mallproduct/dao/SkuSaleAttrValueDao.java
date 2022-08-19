@@ -1,9 +1,8 @@
 package com.vector.mallproduct.dao;
 
-import com.vector.mallproduct.entity.SkuSaleAttrValueEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.vector.mallproduct.entity.SkuSaleAttrValueEntity;
 import com.vector.mallproduct.vo.SkuItemSaleAttrVo;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

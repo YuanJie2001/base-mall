@@ -11,8 +11,6 @@ package com.vector.common.utils;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.json.Json;
-import jakarta.json.stream.JsonParser;
 import org.apache.http.HttpStatus;
 
 import java.util.HashMap;

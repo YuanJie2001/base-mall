@@ -1,7 +1,7 @@
 package com.vector.mallcoupon.dao;
 
-import com.vector.mallcoupon.entity.MemberPriceEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.vector.mallcoupon.entity.MemberPriceEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

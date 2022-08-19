@@ -1,7 +1,7 @@
 package com.vector.mallmember.dao;
 
-import com.vector.mallmember.entity.MemberLevelEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.vector.mallmember.entity.MemberLevelEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

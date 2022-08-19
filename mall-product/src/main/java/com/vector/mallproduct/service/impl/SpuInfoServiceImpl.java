@@ -1,10 +1,16 @@
 package com.vector.mallproduct.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.vector.common.to.SkuHasStockTo;
 import com.vector.common.to.SpuBoundTo;
 import com.vector.common.to.es.SkuEsModel;
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.Query;
 import com.vector.common.utils.R;
+import com.vector.mallproduct.dao.SpuInfoDao;
 import com.vector.mallproduct.entity.*;
 import com.vector.mallproduct.openfeign.CouponOpenFeinService;
 import com.vector.mallproduct.openfeign.SearchOpenFeignService;
@@ -15,21 +21,12 @@ import constant.StatusEnum;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-
-import java.math.BigDecimal;
-import java.util.*;
-import java.util.stream.Collectors;
-
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.Query;
-
-import com.vector.mallproduct.dao.SpuInfoDao;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 @Service("spuInfoService")

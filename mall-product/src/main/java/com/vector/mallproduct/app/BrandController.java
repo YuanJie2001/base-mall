@@ -1,22 +1,17 @@
 package com.vector.mallproduct.app;
 
-import java.util.Arrays;
-import java.util.Map;
-
-import com.vector.common.valid.AddGroup;
-import com.vector.common.valid.UpdateGroup;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import com.vector.mallproduct.entity.BrandEntity;
-import com.vector.mallproduct.service.BrandService;
 import com.vector.common.utils.PageUtils;
 import com.vector.common.utils.R;
+import com.vector.common.valid.AddGroup;
+import com.vector.common.valid.UpdateGroup;
+import com.vector.mallproduct.entity.BrandEntity;
+import com.vector.mallproduct.service.BrandService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Arrays;
+import java.util.Map;
 
 
 /**

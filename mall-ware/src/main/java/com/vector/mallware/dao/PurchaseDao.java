@@ -1,7 +1,7 @@
 package com.vector.mallware.dao;
 
-import com.vector.mallware.entity.PurchaseEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.vector.mallware.entity.PurchaseEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

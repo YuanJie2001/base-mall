@@ -4,7 +4,6 @@
 package com.vector.mallproduct.vo;
 
 import com.vector.common.valid.AddGroup;
-import com.vector.common.valid.UpdateGroup;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;

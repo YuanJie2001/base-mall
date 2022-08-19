@@ -1,5 +1,13 @@
 package com.vector.mallproduct.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.Query;
+import com.vector.mallproduct.dao.AttrAttrgroupRelationDao;
+import com.vector.mallproduct.entity.AttrAttrgroupRelationEntity;
+import com.vector.mallproduct.service.AttrAttrgroupRelationService;
 import com.vector.mallproduct.vo.AttrGroupRelationVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -7,16 +15,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.Query;
-
-import com.vector.mallproduct.dao.AttrAttrgroupRelationDao;
-import com.vector.mallproduct.entity.AttrAttrgroupRelationEntity;
-import com.vector.mallproduct.service.AttrAttrgroupRelationService;
 
 
 @Service("attrAttrgroupRelationService")

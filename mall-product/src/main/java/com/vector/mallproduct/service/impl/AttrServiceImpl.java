@@ -1,43 +1,39 @@
 package com.vector.mallproduct.service.impl;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
-import constant.AttrEnum;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.Query;
 import com.vector.mallproduct.dao.AttrAttrgroupRelationDao;
+import com.vector.mallproduct.dao.AttrDao;
 import com.vector.mallproduct.dao.AttrGroupDao;
 import com.vector.mallproduct.dao.CategoryDao;
 import com.vector.mallproduct.entity.AttrAttrgroupRelationEntity;
+import com.vector.mallproduct.entity.AttrEntity;
 import com.vector.mallproduct.entity.AttrGroupEntity;
 import com.vector.mallproduct.entity.CategoryEntity;
 import com.vector.mallproduct.service.AttrAttrgroupRelationService;
+import com.vector.mallproduct.service.AttrService;
 import com.vector.mallproduct.service.CategoryService;
 import com.vector.mallproduct.vo.AttrGroupRelationVo;
 import com.vector.mallproduct.vo.AttrRespVo;
 import com.vector.mallproduct.vo.AttrVo;
-
+import constant.AttrEnum;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.Query;
-
-import com.vector.mallproduct.dao.AttrDao;
-import com.vector.mallproduct.entity.AttrEntity;
-import com.vector.mallproduct.service.AttrService;
-import org.springframework.transaction.annotation.Transactional;
-
-import javax.annotation.Resource;
 
 
 @Service("attrService")

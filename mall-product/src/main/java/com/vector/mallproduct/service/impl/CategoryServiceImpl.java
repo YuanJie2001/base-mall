@@ -1,10 +1,17 @@
 package com.vector.mallproduct.service.impl;
 
-import com.fasterxml.jackson.core.JsonParser;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.Query;
+import com.vector.mallproduct.dao.CategoryDao;
+import com.vector.mallproduct.entity.CategoryEntity;
 import com.vector.mallproduct.service.CategoryBrandRelationService;
+import com.vector.mallproduct.service.CategoryService;
 import com.vector.mallproduct.vo.Catalog2Vo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.ObjectUtils;
@@ -14,27 +21,14 @@ import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.io.IOException;
+import javax.annotation.Resource;
 import java.lang.reflect.Type;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
-
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.Query;
-
-import com.vector.mallproduct.dao.CategoryDao;
-import com.vector.mallproduct.entity.CategoryEntity;
-import com.vector.mallproduct.service.CategoryService;
-import org.springframework.transaction.annotation.Transactional;
-
-import javax.annotation.Resource;
 
 
 @Service("categoryService")

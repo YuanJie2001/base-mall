@@ -1,6 +1,14 @@
 package com.vector.mallproduct.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.vector.common.utils.PageUtils;
+import com.vector.common.utils.Query;
+import com.vector.mallproduct.dao.AttrGroupDao;
 import com.vector.mallproduct.entity.AttrEntity;
+import com.vector.mallproduct.entity.AttrGroupEntity;
+import com.vector.mallproduct.service.AttrGroupService;
 import com.vector.mallproduct.service.AttrService;
 import com.vector.mallproduct.vo.AttrGroupWithAttrsVo;
 import com.vector.mallproduct.vo.SpuItemAttrGroupVo;
@@ -9,22 +17,10 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.stream.Collectors;
-
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.vector.common.utils.PageUtils;
-import com.vector.common.utils.Query;
-
-import com.vector.mallproduct.dao.AttrGroupDao;
-import com.vector.mallproduct.entity.AttrGroupEntity;
-import com.vector.mallproduct.service.AttrGroupService;
-
-import javax.annotation.Resource;
 
 
 @Service("attrGroupService")

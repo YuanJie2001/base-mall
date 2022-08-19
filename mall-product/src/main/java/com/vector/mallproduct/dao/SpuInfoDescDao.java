@@ -1,8 +1,7 @@
 package com.vector.mallproduct.dao;
 
-import com.vector.mallproduct.entity.SpuInfoDescEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
+import com.vector.mallproduct.entity.SpuInfoDescEntity;
 
 /**
  * spu信息介绍
