@@ -9,10 +9,9 @@
     <description>renren-fast</description>
 
     <parent>
-        <artifactId>supermall</artifactId>
+        <artifactId>base-mall</artifactId>
         <groupId>com.vector</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../../supermall/pom.xml</relativePath>
     </parent>
 
     <properties>

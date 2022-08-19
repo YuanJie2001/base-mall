@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>supermall</artifactId>
+        <artifactId>base-mall</artifactId>
         <groupId>com.vector</groupId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../../supermall/pom.xml</relativePath>
@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>com.vector</groupId>
-            <artifactId>supermall-common</artifactId>
+            <artifactId>mall-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
