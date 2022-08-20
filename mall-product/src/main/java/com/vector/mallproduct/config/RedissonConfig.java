@@ -29,8 +29,8 @@ public class RedissonConfig {
     @Bean(destroyMethod = "shutdown")
     RedissonClient redisson() throws IOException {
         Config config = new Config();
-        //config.useClusterServers().addNodeAddress("127.0.0.1:6379");
-        config.useSingleServer().setAddress("redis://192.168.56.101:6379").setPassword("123456");
+        //config.useClusterServers().addNodeAddress("127.0.0.1:6379").setPassword("123456");
+        config.useSingleServer().setAddress("redis://192.168.68.3:6379");
         return Redisson.create(config);
     }
 

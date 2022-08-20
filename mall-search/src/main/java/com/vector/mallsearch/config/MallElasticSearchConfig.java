@@ -33,7 +33,7 @@ public class MallElasticSearchConfig {
     @Bean
     public ElasticsearchClient esClient() {
         // Create the low-level client
-        RestClient restClient = RestClient.builder(new HttpHost("192.168.56.101", 9200, "http")).build();
+        RestClient restClient = RestClient.builder(new HttpHost("192.168.68.3", 9200, "http")).build();
         // Create the transport with a Jackson mapper
         ElasticsearchTransport transport = new RestClientTransport(
                 restClient, new JacksonJsonpMapper());

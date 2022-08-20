@@ -18,8 +18,6 @@
         <module>mall-gateway</module>
         <module>mall-third-party</module>
         <module>mall-search</module>
-        <module>renren-fast</module>
-        <module>renren-generator</module>
     </modules>
 
     <properties>
@@ -45,8 +43,6 @@
 
 
     <dependencies>
-
-
         <!--测试-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -84,10 +80,7 @@
             <artifactId>commons-collections4</artifactId>
             <version>${commons.collections4.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
