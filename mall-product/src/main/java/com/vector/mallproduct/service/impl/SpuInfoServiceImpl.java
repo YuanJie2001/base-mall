@@ -17,7 +17,7 @@ import com.vector.mallproduct.openfeign.SearchOpenFeignService;
 import com.vector.mallproduct.openfeign.WareOpenFeinService;
 import com.vector.mallproduct.service.*;
 import com.vector.mallproduct.vo.*;
-import constant.StatusEnum;
+import com.vector.common.constant.StatusEnum;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;

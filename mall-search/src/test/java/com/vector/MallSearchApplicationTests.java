@@ -82,11 +82,11 @@ public class MallSearchApplicationTests {
                         .index("bank")
                         .query(query)
                         // 按照年龄值分布聚合
-                        .aggregations("ageAgg", a -> a
-                                .terms(h -> h
-                                        .field("age")
-                                        .size(10)
-                                ))
+//                        .aggregations("ageAgg", a -> a
+//                                .terms(h -> h
+//                                        .field("age")
+//                                        .size(10)
+//                                ))
                         // 计算平均薪资
                         .aggregations("balanceAvg", b -> b
                                 .avg(h -> h
@@ -94,26 +94,26 @@ public class MallSearchApplicationTests {
                 Account.class
         );
         log.info("max score " + response.hits().maxScore());
-        log.info("response.aggregations" + response.aggregations());
+        log.info("response.aggregations " + response.aggregations());
 
 
-        List<Hit<Account>> hits = response.hits().hits();
-        for (Hit<Account> hit : hits) {
-            log.info("Found source " + hit.source() + ", score "
-                    + hit.score()
-                    + ", index " + hit.index()
-                    + ", id " + hit.id());
-        }
+//        List<Hit<Account>> hits = response.hits().hits();
+//        for (Hit<Account> hit : hits) {
+//            log.info("Found source " + hit.source() + ", score "
+//                    + hit.score()
+//                    + ", index " + hit.index()
+//                    + ", id " + hit.id());
+//        }
 
-        List<LongTermsBucket> ageAgg = response.aggregations().get("ageAgg").lterms().buckets().array();
-        for (LongTermsBucket longTermsBucket : ageAgg) {
-            log.info(" ageAgg " + longTermsBucket.docCount() +
-                    " bikes under " + longTermsBucket.key());
-        }
+//        List<LongTermsBucket> ageAgg = response.aggregations().get("ageAgg").lterms().buckets().array();
+//        for (LongTermsBucket longTermsBucket : ageAgg) {
+//            log.info(" ageAgg " + longTermsBucket.docCount() +
+//                    " bikes under " + longTermsBucket.key());
+//        }
 
         AvgAggregate balanceAvg = response.aggregations().get("balanceAvg").avg();
         log.info(" name " + balanceAvg._aggregateKind() +
-                "balanceAvg " + balanceAvg.value());
+                " balanceAvg " + balanceAvg.value());
 
     }
 

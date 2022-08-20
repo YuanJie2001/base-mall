@@ -10,8 +10,8 @@
     </parent>
 
     <packaging>jar</packaging>
-    <artifactId>member</artifactId>
-    <name>member</name>
+    <artifactId>mall-member</artifactId>
+    <name>mall-member</name>
     <description>会员服务</description>
     <properties>
         <java.version>1.8</java.version>

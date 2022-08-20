@@ -6,9 +6,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.68.3:8848
+        server-addr: 127.0.0.1:8848
       config:
-        server-addr: 192.168.68.3:8848
+        server-addr: 127.0.0.1:8848
         namespace: 39d24a7b-6447-49d4-8332-e9067f90e0ba
         extension-configs[0]:
           data-id: oss.yml

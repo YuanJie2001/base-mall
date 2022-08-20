@@ -21,7 +21,7 @@ import com.vector.mallproduct.service.CategoryService;
 import com.vector.mallproduct.vo.AttrGroupRelationVo;
 import com.vector.mallproduct.vo.AttrRespVo;
 import com.vector.mallproduct.vo.AttrVo;
-import constant.AttrEnum;
+import com.vector.common.constant.AttrEnum;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;

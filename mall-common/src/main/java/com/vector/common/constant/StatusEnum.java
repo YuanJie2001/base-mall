@@ -1,4 +1,4 @@
-package constant;
+package com.vector.common.constant;
 
 public enum StatusEnum {
     NEW_SPU(0, "新建"),

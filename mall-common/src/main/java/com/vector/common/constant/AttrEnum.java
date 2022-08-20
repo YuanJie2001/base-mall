@@ -1,4 +1,4 @@
-package constant;
+package com.vector.common.constant;
 
 public enum AttrEnum {
     Attr_TYPE_BASE(1, "基本属性"),

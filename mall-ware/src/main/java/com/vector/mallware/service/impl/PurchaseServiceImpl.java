@@ -14,8 +14,8 @@ import com.vector.mallware.service.WareSkuService;
 import com.vector.mallware.vo.MergeVo;
 import com.vector.mallware.vo.PurchaseDoneVo;
 import com.vector.mallware.vo.PurchaseItemDoneVo;
-import constant.PurchaseDetailStatusEnum;
-import constant.PurchaseSatusEnum;
+import com.vector.common.constant.PurchaseDetailStatusEnum;
+import com.vector.common.constant.PurchaseSatusEnum;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

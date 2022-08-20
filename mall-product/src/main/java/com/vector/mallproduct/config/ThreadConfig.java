@@ -18,7 +18,6 @@ import java.util.concurrent.TimeUnit;
 public class ThreadConfig {
     @Bean
     public ThreadPoolExecutor threadPoolExecutor(ThreadPoolConfigProperties pool) {
-        System.out.println("获得核心线程数 " + pool.getCoreSize());
         return new ThreadPoolExecutor(
                 pool.getCoreSize(),
                 pool.getMaxSize(),

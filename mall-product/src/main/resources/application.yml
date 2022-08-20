@@ -4,8 +4,11 @@ spring:
   datasource:
     username: root
     password: 123456
-    url: jdbc:mysql://192.168.68.3:3306/mall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://192.168.56.101:3306/mall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
+redis:
+  host: 192.168.56.101:6379
+  password: 123456
 
   application:
     name: mall-product
