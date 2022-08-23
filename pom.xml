@@ -45,6 +45,11 @@
 
 
     <dependencies>
+        <!--安全-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
         <!--测试-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -71,6 +76,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
+
         <!--redisson-->
         <dependency>
             <groupId>org.redisson</groupId>
