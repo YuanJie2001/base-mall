@@ -18,7 +18,7 @@ import java.util.Optional;
 
 /**
  * @ClassName UserDetailServiceImpl
- * @Description TODO
+ * @Description 用户信息查询处理
  * @Author YuanJie
  * @Date 2022/8/25 12:45
  */

@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @ClassName UserSecurityTestImpl
- * @Description TODO
+ * @Description 认证授权处理
  * @Author YuanJie
  * @Date 2022/8/23 23:23
  */
@@ -55,7 +55,7 @@ public class UserSecurityTestImpl implements UserSecurityService {
         }
         // 如果认证通过了，使用userid生成一个jwt jwt存入R返回
         loginUserEntity loginUser = (loginUserEntity) authenticate.getPrincipal();
-        String userId = loginUser.getId().toString();
+        String userId = loginUser.getUser().getUserId().toString();
         String jwt = JwtUtil.createJWT(userId);
         Map<String, Object> map = new HashMap<>();
         map.put("token",jwt);
@@ -72,7 +72,7 @@ public class UserSecurityTestImpl implements UserSecurityService {
         UsernamePasswordAuthenticationToken authentication =
                 (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
         loginUserEntity loginUser = (loginUserEntity) authentication.getPrincipal();
-        String userId = loginUser.getId().toString();
+        String userId = loginUser.getUser().getUserId().toString();
         // 删除redis中的值
         RBucket<Object> bucket = redissonClient.getBucket("token:" + userId);
         bucket.delete();

@@ -26,7 +26,7 @@ public class SecurityTest {
     }
 
     @GetMapping("/hello")
-    @PreAuthorize("hasAuthority('system:dept:list')")
+    @PreAuthorize("hasAnyAuthority('admin','system:dept:list')")
     public String hello(){
         return "hello";
     }

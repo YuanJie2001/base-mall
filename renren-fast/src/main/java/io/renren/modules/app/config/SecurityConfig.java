@@ -12,16 +12,17 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
-import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+
 
 import javax.annotation.Resource;
-import javax.sql.DataSource;
+
 
 /**
  * @ClassName SecurityConfigTest
- * @Description TODO
+ * @Description security配置类
  * @Author YuanJie
  * @Date 2022/8/24 10:34
  */
@@ -31,17 +32,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Resource
     private UserDetailsService userDetailsService;
-    @Resource
-    private DataSource dataSource;
+
     @Resource
     private JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter;
-    @Bean
-    public PersistentTokenRepository persistentTokenRepository() {
-        JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
-        jdbcTokenRepository.setDataSource(dataSource);
-//        jdbcTokenRepository.setCreateTableOnStartup(true);
-        return jdbcTokenRepository;
-    }
+    @Resource
+    private AuthenticationEntryPoint authenticationEntryPoint;
+    @Resource
+    private AccessDeniedHandler accessDeniedHandler;
+
 
     @Bean
     // 注入BCryptPasswordEncoder编码器
@@ -75,10 +73,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 // 对于登录接口 允许匿名访问
                 .antMatchers("/user/login").anonymous()
-                .antMatchers("user/register").anonymous()
+                .antMatchers("/user/register").anonymous()
+                .antMatchers("/admin/list").hasAuthority("system:admin:list")
                 // 除上面外的所有请求全部需要鉴权认证
                 .anyRequest().authenticated();
         // 配置过滤器顺序
         http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
+        // 配置异常处理器
+        http.exceptionHandling()
+                .authenticationEntryPoint(authenticationEntryPoint) // 认证失败异常处理器
+                .accessDeniedHandler(accessDeniedHandler); // 授权失败异常处理器
+        // 允许跨域
+        http.cors();
     }
 }

@@ -23,7 +23,7 @@ import java.util.Optional;
 
 /**
  * @ClassName JwtAuthenticationTokenFilter
- * @Description TODO
+ * @Description jwt token回传解密验证数据库信息.
  * @Author YuanJie
  * @Date 2022/8/25 20:43
  */
