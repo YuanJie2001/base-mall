@@ -3,10 +3,10 @@ spring:
     name: mall-third-party
   cloud:
     alicloud:
-      access-key: LTAI5tMXez86xSxjocDM7Y7S
-      secret-key: fEME7Db5oG6IDN74eXC9vQsgo8HFe3
+      access-key: xxxxxxxxxxxxxxx
+      secret-key: xxxxxxxxxxxxxxxxxxx
       oss:
-        endpoint: oss-cn-hangzhou.aliyuncs.com
-        bucket: supermall-project-oss
+        endpoint: oss-cn-xxxxxxxxx.aliyuncs.com
+        bucket: xxxxxxxxxxxxxxxxx
 server:
   port: 18000
